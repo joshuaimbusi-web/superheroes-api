@@ -1,36 +1,32 @@
 # Superheroes API
 
 ## Description
+
 Superheroes API is a Flask-based RESTful API for managing superheroes and their superpowers.  
 It allows users to view heroes, powers, assign powers to heroes, and test email functionality using Flask-Mail.  
-
-This project was built as part of the Phase 4 Flask Code Challenge.
 
 ---
 
 ## Author
+
 **Joshua Biboko**
 
-# Superheroes API
-
-A small Flask RESTful API for managing superheroes, their powers, and testing email functionality (Flask-Mail). Built as part of a Phase 4 Flask code challenge.
-
-**Author:** Joshua Biboko
-
 ## Features
+
 - Heroes
-  - List all heroes — `GET /heroes`
-  - Get a hero (with powers) — `GET /heroes/<id>`
+- List all heroes — `GET /heroes`
+- Get a hero (with powers) — `GET /heroes/<id>`
 - Powers
-  - List all powers — `GET /powers`
-  - Get a power — `GET /powers/<id>`
-  - Update a power's description — `PATCH /powers/<id>`
+- List all powers — `GET /powers`
+- Get a power — `GET /powers/<id>`
+- Update a power's description — `PATCH /powers/<id>`
 - Hero Powers
-  - Assign a power to a hero — `POST /hero_powers`
+- Assign a power to a hero — `POST /hero_powers`
 - Email testing
-  - Send a test email — `GET /test-email` (emails are suppressed in development)
+- Send a test email — `GET /test-email` (emails are suppressed in development)
 
 ## Technologies
+
 - Python 3.12
 - Flask
 - Flask-SQLAlchemy
@@ -40,6 +36,7 @@ A small Flask RESTful API for managing superheroes, their powers, and testing em
 - SQLite
 
 ## Quickstart (Linux / macOS)
+
 1. Clone the repository and create a virtual environment
 
 ```bash
@@ -50,14 +47,14 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-2. Set Flask environment variables
+1. Set Flask environment variables
 
 ```bash
 export FLASK_APP=app.py
 export FLASK_ENV=development
 ```
 
-3. Prepare the database (if migrations not initialized)
+1. Prepare the database (if migrations not initialized)
 
 ```bash
 flask db init   # only if migrations folder is missing
@@ -66,7 +63,7 @@ flask db upgrade
 python seed.py
 ```
 
-4. Run the app
+1. Run the app
 
 ```bash
 flask run --port 5555
@@ -76,6 +73,7 @@ flask run --port 5555
 Windows notes: use `venv\\Scripts\\activate` to activate the virtualenv and `set`/`setx` to set environment variables in PowerShell or CMD.
 
 ## API Endpoints
+
 - `GET /heroes` — list all heroes
 - `GET /heroes/<id>` — get a hero by ID (includes powers)
 - `GET /powers` — list all powers
@@ -85,5 +83,6 @@ Windows notes: use `venv\\Scripts\\activate` to activate the virtualenv and `set
 - `GET /test-email` — trigger test email (suppressed in development)
 
 ## Notes
+
 - Flask-Mail uses `MAIL_SUPPRESS_SEND = True` in development so external emails are not sent.
 - The project uses SQLite (`app.db`) and migrations are handled with Flask-Migrate.
