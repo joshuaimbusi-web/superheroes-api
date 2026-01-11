@@ -14,16 +14,16 @@ It allows users to view heroes, powers, assign powers to heroes, and test email 
 ## Features
 
 - Heroes
-- List all heroes — `GET /heroes`
-- Get a hero (with powers) — `GET /heroes/<id>`
+  - List all heroes — `GET /heroes`
+    - Get a hero (with powers) — `GET /heroes/<id>`
 - Powers
-- List all powers — `GET /powers`
-- Get a power — `GET /powers/<id>`
-- Update a power's description — `PATCH /powers/<id>`
+  - List all powers — `GET /powers`
+    - Get a power — `GET /powers/<id>`
+    - Update a power's description — `PATCH /powers/<id>`
 - Hero Powers
-- Assign a power to a hero — `POST /hero_powers`
+  - Assign a power to a hero — `POST /hero_powers`
 - Email testing
-- Send a test email — `GET /test-email` (emails are suppressed in development)
+  - Send a test email — `GET /test-email` (emails are suppressed in development)
 
 ## Technologies
 
